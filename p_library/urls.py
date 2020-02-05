@@ -8,3 +8,7 @@ urlpatterns = [
     path('author/create', AuthorEdit.as_view(), name='author_create'),
     path('authors', AuthorList.as_view(), name='author_list'),
 ]
+
+# http://127.0.0.1:8000/author/create
+# http://127.0.0.1:8000/authors
+
