@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Friend(models.Model):
-    name = models.TextField(verbose_name='Кому одолжил(Имя)')
-    borrowed = models.DateField(verbose_name='Дата выдачи книги', null=True)
+    name = models.TextField(verbose_name='Кому одолжил(Имя)', null=True, blank=True)
+    borrowed = models.DateField(verbose_name='Дата выдачи книги', null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -24,4 +24,4 @@ class Book(models.Model):
     description = models.TextField()
     year_release = models.SmallIntegerField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    # friend = models.ForeignKey(Friend, on_delete=models.CASCADE)
+    friend = models.ForeignKey(Friend, on_delete=models.CASCADE)
