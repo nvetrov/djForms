@@ -13,6 +13,8 @@ urlpatterns = [
     path('author_book/create_many', books_authors_create_many, name='author_book_create_many'),
 ]
 
+
+# http://127.0.0.1:8000/friends
 # http://127.0.0.1:8000/author/create
 # http://127.0.0.1:8000/authors
 
