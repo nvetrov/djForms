@@ -21,14 +21,14 @@ class AuthorEdit(CreateView):
 
 
 class AuthorList(ListView):
-    model = Friend
+    model = Author
     template_name = 'authors_list.html'
 
 
-class FriendList(ListView):
-    model = Author
-    template_name = 'friend_add.html'
 
+class FriendList(ListView):
+    model = Friend
+    template_name = 'friend_add.html'
 
 
 def author_create_many(request):
