@@ -15,7 +15,8 @@ class AuthorEdit(CreateView):
     model = Author
     form_class = AuthorForm
     success_url = reverse_lazy(
-        'p_library:author_list')  # мы будем переадресовывать браузер пользователя при успешной обработке формы создания, чтобы можно было сразу увидеть нового автора среди ранее созданных.
+        'p_library:author_list')  # мы будем переадресовывать браузер пользователя при успешной обработке формы
+    # создания, чтобы можно было сразу увидеть нового автора среди ранее созданных.
     template_name = 'authors_edit.html'
 
 

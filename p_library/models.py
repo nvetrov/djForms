@@ -25,4 +25,3 @@ class Book(models.Model):
     year_release = models.SmallIntegerField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     friend = models.ForeignKey(Friend, on_delete=models.CASCADE)
-
